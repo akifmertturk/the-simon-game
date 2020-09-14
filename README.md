@@ -9,3 +9,4 @@ If the user succeeds, the series becomes progressively longer and more complex.
 Once the user fails or the time limit runs out, the game is over.
 
 <p>For More Info about the Game (how to play, history of the game, etc.), <a href="https://en.wikipedia.org/wiki/Simon_(game)" target="_blank">click here</a></p>
+ 
