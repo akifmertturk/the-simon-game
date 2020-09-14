@@ -12,7 +12,9 @@ var level = 0;
 
 var started = false;
 
-// First Time Key Pressed
+// I commented this part because it is not reponsive with mobile devices.
+/*
+First Time Key Pressed
 $(document).keydown(function () {
     if (!started) {
         $("#level-title").text("Level " + level);
@@ -20,6 +22,16 @@ $(document).keydown(function () {
         started = true;
     }
 });
+*/
+
+$(".playBtn").click(function () {
+    if (!started) {
+        $("#level-title").text("Level " + level);
+        nextSequence();
+        started = true;
+        $(this).hide();
+    }
+})
 
 // Determine Next Sequence
 function nextSequence() {
@@ -40,20 +52,27 @@ function nextSequence() {
     // Animate the button with id is equal to randomChosenColour 
     $("#" + randomChosenColour).fadeIn(100).fadeOut(100).fadeIn(100);
 
-    // Play the sound with related colour
+    // Play the sound with the related colour
     playSound(randomChosenColour);
 }
 
-// Button Handler
+// Colour Button Handler
 
 $(".btn").click(function () {
 
-    var userChosenColour = $(this).attr("id");
-    userClickedPattern.push(userChosenColour);
+    // When game started, get the colour of the user which clicked 
+    if (started) {
+        if (userClickedPattern.length !== gamePattern.length) {
+            var userChosenColour = $(this).attr("id");
+            userClickedPattern.push(userChosenColour);
 
-    checkAnswer(userClickedPattern.length - 1);
-    playSound(userChosenColour);
-    animatePress(userChosenColour);
+            checkAnswer(userClickedPattern.length - 1);
+            playSound(userChosenColour);
+            animatePress(userChosenColour);
+        }
+    }
+
+    // Otherwise wait the game start, so do nothing.
 
 });
 
@@ -85,7 +104,7 @@ function checkAnswer(currentLevel) {
         setTimeout(function () {
             $("body").removeClass("game-over");
         }, 200);
-        $("h1").text("Game Over, Press Any Key to Restart");
+        $("h1").text("Game Over, Press PLAY AGAIN Key to Restart");
         startOver();
     }
 }
@@ -101,6 +120,9 @@ function playSound(name) {
 
 // Restart the game
 function startOver() {
+    //Show PLAY AGAIN button
+    $(".playBtn").show().text("PLAY AGAIN");
+
     level = 0;
     gamePattern = [];
     started = false;

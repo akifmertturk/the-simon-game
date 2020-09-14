@@ -6,8 +6,8 @@ body {
 #level-title {
   font-family: 'Press Start 2P', cursive;
   font-size: 3rem;
-  margin-top: 5%;
-  margin-bottom: 8%;
+  margin-top: 2%;
+  margin-bottom: 5%;
   margin-right: 5%;
   margin-left: 5%;
   color: #FEF2BF;
@@ -26,6 +26,16 @@ body {
   width: 200px;
   border: 10px solid black;
   border-radius: 20%;
+}
+
+.playBtn {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 2.5rem;
+  padding: 1rem;
+  margin: 10px;
+  height: auto;
+  width: 15rem;
+  border: 10px solid black;
 }
 
 .game-over {
