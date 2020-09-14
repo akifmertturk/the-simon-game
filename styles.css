@@ -1,13 +1,14 @@
 body {
   text-align: center;
   background-color: #011F3F;
+  line-break: 1.5;
 }
 
 #level-title {
   font-family: 'Press Start 2P', cursive;
   font-size: 3rem;
   margin-top: 2%;
-  margin-bottom: 5%;
+  margin-bottom: 2%;
   margin-right: 5%;
   margin-left: 5%;
   color: #FEF2BF;
