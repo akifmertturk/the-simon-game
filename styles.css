@@ -3,6 +3,23 @@ body {
   background-color: #011F3F;
 }
 
+p {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 2rem;
+  color: lavenderblush;
+  margin: 5%;
+}
+
+#how-to-play-title {
+  color: #FEF2BF;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 3rem;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  margin-right: 5%;
+  margin-left: 5%;
+}
+
 #level-title {
   font-family: 'Press Start 2P', cursive;
   font-size: 3rem;
@@ -13,11 +30,18 @@ body {
   color: #FEF2BF;
 }
 
+.how-to-page {
+  border: solid green 1rem;
+  padding-bottom: 1rem;
+}
+
 .container {
   display: block;
   width: 50%;
   margin: auto;
 }
+
+/* Buttons */
 
 .btn {
   margin: 25px;

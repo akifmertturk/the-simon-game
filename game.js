@@ -12,6 +12,11 @@ var level = 0;
 
 var started = false;
 
+// when page is show() (showen), the play button is clicked although user did not click,
+// to deal with this, show variable is added and it is checked at the beginning of the 
+// playBtn callback function.
+var show = true;
+
 // I commented this part because it is not reponsive with mobile devices.
 /*
 First Time Key Pressed
@@ -24,12 +29,26 @@ $(document).keydown(function () {
 });
 */
 
+// First hide the game page, untill user press OK button of how-to-play page
+$(".play-page").hide();
+
+// User clicked the OK button, this means that the game starts.
+$("#okBtn").click(function () {
+    $(".how-to-page").hide();
+    $(".play-page").show();
+});
+
 $(".playBtn").click(function () {
-    if (!started) {
+    // If the game is not started yet and if the event calling this function is not show() method, then start the game
+    if (!started && !show) {
         $("#level-title").text("Level " + level);
         nextSequence();
         started = true;
         $(this).hide();
+    }
+    // If this function is called because of show() method, then change the var show to false
+    if (show === true) {
+        show = false;
     }
 })
 
