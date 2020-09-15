@@ -119,3 +119,23 @@ p {
     width: 100%;
   }
 }
+
+@media (max-width: 450px) {
+  #level-title {
+    font-size: 2rem;
+  }
+
+  .btn {
+    margin: 5%;
+    height: 300px;
+    width: 300px;
+  }
+
+  .container {
+    width: 100%;
+  }
+
+  .playBtn {
+    margin: 10%;
+  }
+}
