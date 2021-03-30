@@ -1,5 +1,5 @@
 # the-simon-game
-It is well-known game, simon, which depends on memorizing the sequence of tones and colours.
+It is a well-known game, simon, which depends on memorizing the sequence of tones and colours.
 
 This is the project that I have learnt on a Udemy course of Angela Yu, <i>The Complete Web Development Bootcamp</i>. I have learnt the basics of the game and how to code it on the course, and then I decided to improve it so that it will be a game played with everyone around me. I am improving this little fun game at the same time improving myself in web developing.
 
